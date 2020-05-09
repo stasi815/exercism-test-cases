@@ -1,12 +1,14 @@
 import heapq
 
 def check_ints(scores):
+    """Helper function to check that list values are all integers"""
     if all(isinstance(x, int) for x in scores):
         return True
     else:
         return False
 
 def latest(scores):
+    """Takes list of scores and returns the last added score"""
     if check_ints(scores) == False or len(scores) == 0:
         raise Exception("Please enter valid integer scores.")
     elif check_ints(scores)==True:
@@ -14,12 +16,14 @@ def latest(scores):
 
 
 def personal_best(scores):
+    """Takes list of scores and returns the top score"""
     if check_ints(scores) == False or len(scores) == 0:
         raise Exception("Please enter valid integer scores.")
     elif check_ints(scores)==True:
         return max(scores)
 
 def personal_top_three(scores):
+    """Takes list of scores and returns the three highest scores"""
     if check_ints(scores) == False or len(scores) == 0:
         raise Exception("Please enter valid integer scores.")
     elif check_ints(scores)==True:
